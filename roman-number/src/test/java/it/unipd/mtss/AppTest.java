@@ -5,20 +5,14 @@
 
 package it.unipd.mtss;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest {
 
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void shouldAnswerWithTrue() {
-        assertTrue(true);
+    public void testAppIsNotNull() {
+        App app = new App();
+        assertNotNull(app, "L'oggetto App non dovrebbe essere null");
     }
 }
