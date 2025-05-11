@@ -30,6 +30,14 @@ public class RomanPrinter
             "   \\  /    ",
             "    \\/     "
         };
+        String[] cifra_X = {
+            " __   __ ",
+            "\\ \\ / / ",
+            " \\ V /  ",
+            "  > <   ",
+            " / . \\  ",
+            "/_/ \\_\\ "
+        };
 
         StringBuilder risultato = new StringBuilder();
 
@@ -45,6 +53,9 @@ public class RomanPrinter
                         break;
                     case 'V':
                         risultato.append(cifra_V[i]);
+                        break;
+                    case 'X':
+                        risultato.append(cifra_X[i]);
                         break;
                     default:
                         throw new IllegalArgumentException("Carattere non valido: " + romanNumber.charAt(k));

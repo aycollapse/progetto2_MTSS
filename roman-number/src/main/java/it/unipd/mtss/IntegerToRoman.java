@@ -15,8 +15,8 @@ public class IntegerToRoman
         }
 
         // Mappatura valore-simbolo
-        int[] valori = {5, 4, 1 };
-        String[] simboli = {"V", "IV", "I"};
+        int[] valori = { 10, 9, 5, 4, 1 };
+        String[] simboli = {"X", "IX","V", "IV", "I"};
 
         StringBuilder risultato = new StringBuilder();
 
