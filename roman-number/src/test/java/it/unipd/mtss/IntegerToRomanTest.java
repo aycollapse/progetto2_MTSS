@@ -17,6 +17,9 @@ public class IntegerToRomanTest
             {"1", "I"},
             {"2", "II"},
             {"3", "III"},
+            {"4", "IV"},
+            {"5", "V"},
+            {"6", "VI"},
         };
         for (String[] s : test) {
             int numero = Integer.parseInt(s[0]);
@@ -38,6 +41,9 @@ public class IntegerToRomanTest
         String[] cifra_I = {
             " _____  ", "|_   _| ", "  | |   ", "  | |   ", " _| |_  ", "|_____| "
         };
+        String[] cifra_V = {
+            "__      __ ", "\\ \\    / / ", " \\ \\  / /  ", "  \\ \\/ /   ", "   \\  /    ", "    \\/     "
+        };
 
         StringBuilder risultato = new StringBuilder();
 
@@ -46,6 +52,9 @@ public class IntegerToRomanTest
                 switch (romanNumber.charAt(k)) {
                     case 'I':
                         risultato.append(cifra_I[i]);
+                        break;
+                    case 'V':
+                        risultato.append(cifra_V[i]);
                         break;
                     default:
                         throw new IllegalArgumentException("Carattere non valido: " + romanNumber.charAt(k));
